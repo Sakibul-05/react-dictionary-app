@@ -1,0 +1,32 @@
+.HomePage{
+    /* border: 2px solid red; */
+    height: 100%;
+    background-color: #f0f0f0;
+}
+.form-container{
+    /* border: 2px solid black; */
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box{
+    display: flex; 
+    justify-content: center;
+    height: 2em;
+    width: 25rem;
+}
+.search-input{
+    border: none;
+    width: 100%;
+    padding-left: 5px;
+}
+.btn{
+    background:#2c2c2c ;
+    color: #ffff;
+    padding: 0 1rem;
+}
+
+.word-desc{
+    background-color: #fff;
+}

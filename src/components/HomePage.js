@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addSearchWord, addToHistory } from '../redux/actions/action';
 import Loader from './Loader';
+import "./HomePage.css"
 
 const HomePage = () => {
   const [word, setWord] = useState('');
@@ -38,22 +39,25 @@ const HomePage = () => {
       setError(null);
     } catch (error) {
       setError(error.message);
+      setWordData(null)
     }
     setLoading(false);
   };
 
   return (
-    <div>
+    <div className='HomePage'>
       {loading ? <Loader /> : (
         <>
           
-          <form onSubmit={handleSearch} className="fo-rm">
-            <input type="text" value={word} onChange={handleInputChange} placeholder="Search for a word" className="search-input" />
-            <button type="submit" className="btn">Search</button>
-          </form>
+          <div className='form-container'>
+            <form onSubmit={handleSearch} className="form-box">
+                <input type="text" value={word} onChange={handleInputChange} placeholder="Search for a word" className="search-input" />
+                <button type="submit" className="btn">Search</button>
+            </form>
+          </div>
           {error && <p className="err">{error}</p>}
           {wordData && (
-            <div>
+            <div className='word-desc'>
               {wordData.map((word, index) => (
                 <div key={index}>
                   <h2>Word: {word.word}</h2>

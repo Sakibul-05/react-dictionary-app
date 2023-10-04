@@ -1,19 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../App.css";
+import { useNavigate } from 'react-router-dom';
+// import "../App.css";
+import "./Navbar.css"
 const Navbar = () => {
+    const navigate = useNavigate();
+
   return (
-    <nav className='ncontainer'>
-        <h1 className='nleft'>Dictionary App</h1>
-      <ul className='nright'>
-        <li>
-          <Link to="/" >Home</Link>
-        </li>
-        <li>
-          <Link to="/history">History</Link>
-        </li>
-      </ul>
-    </nav>
+    <div className='Navbar'>
+        <nav className='nav'>
+            <h1 className='navLeft' >Dictionary App</h1>
+            <ul className='navRight'>
+                <li>
+                <Link to="/" className='link' >Home</Link>
+                </li>
+                <li>
+                <Link to="/history" className='link'>History</Link>
+                </li>
+            </ul>
+        </nav>
+    </div>
   );
 };
 

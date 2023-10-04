@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import "./HistoryPage.css"
 
 const HistoryPage = () => {
   const searchHistory = useSelector(state => state.search);
@@ -18,18 +19,16 @@ const HistoryPage = () => {
   };
 
   return (
-    <div>
-      <h1>Search History</h1>
+    <div className='HistoryPage'>
+      <h1 className='heading'>Search History</h1>
       {error ? (
         <p className="err">{error}</p>
       ) : searchHistory && searchHistory.length > 0 ? (
-        <ul>
+        <div className='search-history-container'>
           {searchHistory.map((item, index) => (
-            <li key={index} onClick={() => handleHistoryClick(item)}>
-               <p className='it'>{item}</p>
-            </li>
+               <p className='list' key={index} onClick={() => handleHistoryClick(item)}>{item}</p>
           ))}
-        </ul>
+        </div>
       ) : (
         <p className="err">No search history found</p>
       )}

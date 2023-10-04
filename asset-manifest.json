@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-dictionary-app/static/css/main.21b81dd5.css",
-    "main.js": "/react-dictionary-app/static/js/main.f875204a.js",
+    "main.css": "/react-dictionary-app/static/css/main.ede861f7.css",
+    "main.js": "/react-dictionary-app/static/js/main.bc114155.js",
     "index.html": "/react-dictionary-app/index.html",
-    "main.21b81dd5.css.map": "/react-dictionary-app/static/css/main.21b81dd5.css.map",
-    "main.f875204a.js.map": "/react-dictionary-app/static/js/main.f875204a.js.map"
+    "main.ede861f7.css.map": "/react-dictionary-app/static/css/main.ede861f7.css.map",
+    "main.bc114155.js.map": "/react-dictionary-app/static/js/main.bc114155.js.map"
   },
   "entrypoints": [
-    "static/css/main.21b81dd5.css",
-    "static/js/main.f875204a.js"
+    "static/css/main.ede861f7.css",
+    "static/js/main.bc114155.js"
   ]
 }
